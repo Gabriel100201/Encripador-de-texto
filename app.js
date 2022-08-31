@@ -1,24 +1,51 @@
-function encriptar(){
-    var textoParaEncriptar = document.querySelector("#texto1").value;
-    let cadena= /e/g;
-    textoParaEncriptar = textoParaEncriptar.replace(cadena,"enter");
-    cadena= /i/g;
-    textoParaEncriptar = textoParaEncriptar.replace(cadena,"imes");
-    cadena= /a/g;
-    textoParaEncriptar = textoParaEncriptar.replace(cadena,"ai");
-    cadena= /o/g;
-    textoParaEncriptar = textoParaEncriptar.replace(cadena,"over");
-    cadena= /u/g;
-    textoParaEncriptar = textoParaEncriptar.replace(cadena,"ufat");
-    console.log(textoParaEncriptar);
-    return textoParaEncriptar;
+const inputTexto = document.querySelector(".textarea1");
+const mensaje = document.querySelector(".textarea2");
+const imagen = document.querySelector("#lupa");
+const mensajeProvisorio = document.querySelector("#mensaje-provisorio");
+
+
+function encriptar(stringEncriptada){
+
+    let matrizCodigo = [["e","enter"],["i","imes"],["a","ai"],["o","over"],["u","ufat"]];
+    stringEncriptada = stringEncriptada.toLowerCase();
+
+    for (let i=0 ; i<matrizCodigo.length ; i++){
+        if (stringEncriptada.includes(matrizCodigo[i][0])){
+            stringEncriptada = stringEncriptada.replaceAll(matrizCodigo[i][0], matrizCodigo[i][1])
+        }
+    }
+    return stringEncriptada;
 }
-function escribir(){
+function desencriptar(stringDesencriptada){
+    let matrizCodigo = [["enter","e"],["imes","i"],["ai","a"],["over","o"],["ufat","u"]];
+    stringDesencriptada = stringDesencriptada.toLowerCase();
+
+    for (let i=0 ; i<matrizCodigo.length ; i++){
+        if (stringDesencriptada.includes(matrizCodigo[i][0])){
+            stringDesencriptada = stringDesencriptada.replaceAll(matrizCodigo[i][0], matrizCodigo[i][1])
+        }
+    }
+    return stringDesencriptada;
 }
-function quitarImagen(){
-    document.getElementById("lupa").style.display = "none";
-    document.getElementById("mensaje-provisorio").style.display = "none";
-    document.getElementById("mensaje-resuelto").style.display = "block";
+function botonEncriptar(){
+    const textoEncriptado = encriptar(inputTexto.value);
+    mensaje.value = textoEncriptado;
+    mensaje.style.display = "inline-block";
+    imagen.style.display = "none";
+    mensajeProvisorio.style.display = "none";
+    inputTexto.value = "";
+}
+function botonDesencriptar(){
+    const textoDesencriptado = desencriptar(inputTexto.value);
+    mensaje.value = textoDesencriptado;
+    inputTexto.value = "";
+    mensaje.style.display = "inline-block";
+    imagen.style.display = "none";
+    mensajeProvisorio.style.display = "none";
 }
 
+function copiar(){
+    mensaje.select();
+    navigator.clipboard.writeText(mensaje.value);
+}
 

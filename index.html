@@ -10,7 +10,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
-    <script src="app.js"></script>
     <title>Encriptador de texto</title>
 </head>
 <body>
@@ -24,21 +23,22 @@
     </header>
     <main>
         <div class="caja-encriptador">
-                <textarea id="texto1" class="textarea1" placeholder="Ingrese su texto" required></textarea>
+                <textarea class="textarea1" placeholder="Ingrese su texto"></textarea>
                 <div class="botones">
-                    <button class="boton-encriptar" onclick="quitarImagen()" onclick="encriptar()">Encriptar</button>
-                    <button class="boton-desencriptar">Desencriptar</button>
+                    <button class="boton-encriptar" onclick="botonEncriptar()">Encriptar</button>
+                    <button class="boton-desencriptar" onclick="botonDesencriptar()">Desencriptar</button>
                 </div>
         </div>
         <div class="caja-mensaje">
             <div class="caja-texto-desencriptado">
                 <img class="imagen-lupa" src="imagenes/25313.png" id="lupa">
                 <p id="mensaje-provisorio" class="mensaje-desencriptado">Ningun mensaje para desencriptar</p>
-                <p class="mensaje-resuelto" id="mensaje-resuelto">ningun mensaje</p>
+                <textarea disabled class="textarea2"></textarea>
             </div>
-            <button class="boton-copiar">Copiar</button>
+            <button class="boton-copiar" onclick="copiar()">Copiar</button>
         </div>
     </main>
+    <script src="app.js"></script>
     <footer>
         <div class="icons-container">
             <i class='bx bxl-github'></i>
