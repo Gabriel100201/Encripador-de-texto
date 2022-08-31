@@ -26,7 +26,7 @@
         <div class="caja-encriptador">
                 <textarea id="texto1" class="textarea1" placeholder="Ingrese su texto" required></textarea>
                 <div class="botones">
-                    <button class="boton-encriptar" onclick="encriptar()">Encriptar</button>
+                    <button class="boton-encriptar" onclick="quitarImagen()" onclick="encriptar()">Encriptar</button>
                     <button class="boton-desencriptar">Desencriptar</button>
                 </div>
         </div>
@@ -34,6 +34,7 @@
             <div class="caja-texto-desencriptado">
                 <img class="imagen-lupa" src="imagenes/25313.png" id="lupa">
                 <p id="mensaje-provisorio" class="mensaje-desencriptado">Ningun mensaje para desencriptar</p>
+                <p class="mensaje-resuelto" id="mensaje-resuelto">ningun mensaje</p>
             </div>
             <button class="boton-copiar">Copiar</button>
         </div>

@@ -96,6 +96,12 @@ nav i {
     font-size: 30px;
     font-family: 'Source Code Pro', monospace;
 }
+.mensaje-resuelto{
+    display: none;
+    padding: 50px;
+    font-size: 30px;
+    font-family: 'Source Code Pro', monospace;
+}
 .imagen-lupa{
     width: 150px;
     margin-top: 150px;

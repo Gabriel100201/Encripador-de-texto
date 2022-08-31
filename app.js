@@ -1,11 +1,4 @@
-function quitarImagen(){
-    document.getElementById("lupa").style.display = "none";
-    document.getElementById("mensaje-provisorio").style.display = "none";
-}
-
-
 function encriptar(){
-    var contador=0;
     var textoParaEncriptar = document.querySelector("#texto1").value;
     let cadena= /e/g;
     textoParaEncriptar = textoParaEncriptar.replace(cadena,"enter");
@@ -18,5 +11,14 @@ function encriptar(){
     cadena= /u/g;
     textoParaEncriptar = textoParaEncriptar.replace(cadena,"ufat");
     console.log(textoParaEncriptar);
+    return textoParaEncriptar;
 }
+function escribir(){
+}
+function quitarImagen(){
+    document.getElementById("lupa").style.display = "none";
+    document.getElementById("mensaje-provisorio").style.display = "none";
+    document.getElementById("mensaje-resuelto").style.display = "block";
+}
+
 
