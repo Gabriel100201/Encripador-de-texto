@@ -115,6 +115,8 @@ nav i {
     background: transparent;
     border: none;
     color: #000;
+    height: 100%;
+    width: 80%;
 }
 .boton-copiar{
     display: inline-block;
