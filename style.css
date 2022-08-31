@@ -109,12 +109,15 @@ nav i {
 .boton-copiar:hover{
     border: 3px solid rgb(230, 219, 210);
 }
+/*FOOTER CON ICONOS DE LINKEDIN Y GITGU*/
 footer{
     width: 100%;
     height: 100px;
     background-color: #000;
     position: absolute;
     bottom: 0px;
+    text-align: center;
+    padding: 20px;
 }
 .icons-container{
     display: inline-block;
@@ -128,8 +131,4 @@ footer{
 footer i{
     color: white;
     font-size: 45px;
-}
-footer{
-    text-align: center;
-    padding: 20px;
 }
