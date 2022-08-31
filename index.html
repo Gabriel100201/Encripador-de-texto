@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
+    <script src="app.js"></script>
     <title>Encriptador de texto</title>
 </head>
 <body>
@@ -23,15 +24,16 @@
     </header>
     <main>
         <div class="caja-encriptador">
-            <textarea class="textarea1"></textarea>
-            <div class="botones">
-                <button class="boton-encriptar">Encriptar</button>
-                <button class="boton-desencriptar">Desencriptar</button>
-            </div>
+                <textarea id="texto1" class="textarea1" placeholder="Ingrese su texto" required></textarea>
+                <div class="botones">
+                    <button class="boton-encriptar" onclick="encriptar()">Encriptar</button>
+                    <button class="boton-desencriptar">Desencriptar</button>
+                </div>
         </div>
         <div class="caja-mensaje">
             <div class="caja-texto-desencriptado">
-                <p class="mensaje-desencriptado">Mensaje desencriptado</p>
+                <img class="imagen-lupa" src="imagenes/25313.png" id="lupa">
+                <p id="mensaje-provisorio" class="mensaje-desencriptado">Ningun mensaje para desencriptar</p>
             </div>
             <button class="boton-copiar">Copiar</button>
         </div>
@@ -39,7 +41,7 @@
     <footer>
         <div class="icons-container">
             <i class='bx bxl-github'></i>
-            <i class='bx bxl-linkedin-square' ></i>
+            <i class='bx bxl-linkedin-square'></i>
         </div>
         <p class="desarrollo">Desarrollado por Gabriel Funes</p>
     </footer>

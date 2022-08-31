@@ -89,11 +89,16 @@ nav i {
     border: 2px solid black;
     border-radius: 20px;
     margin-top: 100px;
+    text-align: center;
 }
 .mensaje-desencriptado{
     padding: 50px;
     font-size: 30px;
     font-family: 'Source Code Pro', monospace;
+}
+.imagen-lupa{
+    width: 150px;
+    margin-top: 150px;
 }
 .boton-copiar{
     display: inline-block;
